@@ -8,7 +8,6 @@ namespace DataStructureLinkedList.cs
 {
     class CustomLinkedList
     {
-        /// UC5 delete a first element in linked list
         Node head;
 
         //creating method for inserting elements at last
@@ -87,6 +86,29 @@ namespace DataStructureLinkedList.cs
             int deleteNode = this.head.data;
             this.head = this.head.next;
             return deleteNode;
+        }
+
+        //method to delete first node
+        public int DeleteLastNode()
+        {
+            Node newNode = this.head;
+            if (this.head == null)
+            {
+                return 0;
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+                return 0;
+            }
+
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            int lastDeletedNode = newNode.next.data;
+            newNode.next = null;
+            return lastDeletedNode;
         }
 
         //method for displaying elements in linked list
