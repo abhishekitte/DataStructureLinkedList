@@ -53,6 +53,30 @@ namespace DataStructureLinkedList.cs
             InsertLast(new_data);
         }
 
+        //method for Insert at middle of a linked list
+        public void InsertMid(int new_data)
+        {
+            Node new_node = new Node(new_data);
+            Node pos = head;
+            int len = 0;
+            //calculate the length of linked list
+            while (pos != null)
+            {
+                len++;
+                pos = pos.next;
+            }
+            //finding middle possition
+            int count = ((len % 2) == 0) ? (len / 2) : (len + 1) / 2;
+            pos = head;
+            //pos is the pointer to the node after which the new node to be insert
+            while (count-- > 1)
+            {
+                pos = pos.next;
+            }
+            new_node.next = pos.next;
+            pos.next = new_node;
+        }
+
         //method for displaying elements in linked list
         public void Display()
         {

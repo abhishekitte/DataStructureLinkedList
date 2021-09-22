@@ -1,0 +1,5 @@
+C:\Users\pihu\source\repos\DataStruturesLinkedList.cs\DataStruturesLinkedList.cs\obj\Debug\netcoreapp3.1\DataStruturesLinkedList.cs.csproj.AssemblyReference.cache
+C:\Users\pihu\source\repos\DataStruturesLinkedList.cs\DataStruturesLinkedList.cs\obj\Debug\netcoreapp3.1\DataStruturesLinkedList.cs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pihu\source\repos\DataStruturesLinkedList.cs\DataStruturesLinkedList.cs\obj\Debug\netcoreapp3.1\DataStruturesLinkedList.cs.AssemblyInfoInputs.cache
+C:\Users\pihu\source\repos\DataStruturesLinkedList.cs\DataStruturesLinkedList.cs\obj\Debug\netcoreapp3.1\DataStruturesLinkedList.cs.AssemblyInfo.cs
+C:\Users\pihu\source\repos\DataStruturesLinkedList.cs\DataStruturesLinkedList.cs\obj\Debug\netcoreapp3.1\DataStruturesLinkedList.cs.csproj.CoreCompileInputs.cache
