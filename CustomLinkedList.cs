@@ -42,9 +42,15 @@ namespace DataStructureLinkedList.cs
         public void InsertFront(int new_data)
         {
             Node new_node = new Node(new_data);
-            new_node.next = this.head; 
+            new_node.next = this.head;
             this.head = new_node;
             Console.WriteLine("Inserted into list" + new_node.data);
+        }
+
+        //Method for Appending elements at last in the list
+        public void Append(int new_data)
+        {
+            InsertLast(new_data);
         }
 
         //method for displaying elements in linked list
