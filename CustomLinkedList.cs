@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 namespace DataStructureLinkedList.cs
 {
     class CustomLinkedList
-    {
-     /// UC8 search a element and insert a node after that in linked list
+    {/// <summary>
+     /// UC10 sort a linked list
+     /// </summary>
         public Node head;
 
         //creating method for inserting elements at last
@@ -42,7 +43,7 @@ namespace DataStructureLinkedList.cs
         public void InsertFront(int new_data)
         {
             Node new_node = new Node(new_data);
-            new_node.next = this.head;
+            new_node.next = this.head; 
             this.head = new_node;
             Console.WriteLine("Inserted into list" + new_node.data);
         }
@@ -128,7 +129,7 @@ namespace DataStructureLinkedList.cs
             return value;
         }
 
-        //method 
+        //method to find and insert after that
         public void FindAndInsert(Node exist_node, int new_data)
         {
             if (exist_node == null)
@@ -140,6 +141,68 @@ namespace DataStructureLinkedList.cs
             new_node.next = exist_node.next;
             exist_node.next = new_node;
         }
+
+        //method to find a node and delete that
+        public void DeleteNode(int value)
+        {
+            //head node stored in temp
+            Node temp = head, prev = null;
+            //checking the head node holding the value
+            if (temp != null && temp.data == value)
+            {
+                head = temp.next;
+            }
+            //search for value to delete,also update previous node as temp.next
+            while (temp != null && temp.data != value)
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+
+            if (temp == null)
+            {
+                Console.WriteLine("Given node is not present");
+            }
+            //delete node 
+            prev.next = temp.next;
+        }
+        //method to show size of linked list
+        public int Size()
+        {
+            Node temp = head;
+            int count = 0;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
+
+        //method for sort the linked list
+        public void Sort()
+        {
+            Node temp = head;
+            Node firstVal = null;
+            int val = 0;
+            while (temp != null)
+            {
+                firstVal = temp.next;
+                while (firstVal != null)
+                {
+                    if (temp.data > firstVal.data)
+                    {
+                        val = firstVal.data;
+                        firstVal.data = temp.data;
+                        temp.data = val;
+                    }
+                    firstVal = firstVal.next;
+                }
+                temp = temp.next;
+            }
+            Console.WriteLine("Sorted list");
+        }
+
         //method for displaying elements in linked list
         public void Display()
         {

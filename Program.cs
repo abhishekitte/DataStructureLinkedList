@@ -18,10 +18,9 @@ namespace DataStructureLinkedList.cs
             CustomLinkedList customLinkedList = new CustomLinkedList();
             customLinkedList.InsertLast(56);
             customLinkedList.InsertLast(30);
+            customLinkedList.InsertLast(40);
             customLinkedList.InsertLast(70);
-            Console.WriteLine("Linked list before insertion:");
-            customLinkedList.Display();
-            customLinkedList.FindAndInsert(customLinkedList.head.next, 40);
+            customLinkedList.Sort();
             customLinkedList.Display();
             Console.ReadLine();
         }
