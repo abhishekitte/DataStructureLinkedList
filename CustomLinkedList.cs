@@ -8,7 +8,7 @@ namespace DataStructureLinkedList.cs
 {
     class CustomLinkedList
     {/// <summary>
-     /// UC9 delete a node,then display the size of linked list
+     /// UC10 sort a linked list
      /// </summary>
         public Node head;
 
@@ -43,7 +43,7 @@ namespace DataStructureLinkedList.cs
         public void InsertFront(int new_data)
         {
             Node new_node = new Node(new_data);
-            new_node.next = this.head;
+            new_node.next = this.head; 
             this.head = new_node;
             Console.WriteLine("Inserted into list" + new_node.data);
         }
@@ -177,6 +177,30 @@ namespace DataStructureLinkedList.cs
                 temp = temp.next;
             }
             return count;
+        }
+
+        //method for sort the linked list
+        public void Sort()
+        {
+            Node temp = head;
+            Node firstVal = null;
+            int val = 0;
+            while (temp != null)
+            {
+                firstVal = temp.next;
+                while (firstVal != null)
+                {
+                    if (temp.data > firstVal.data)
+                    {
+                        val = firstVal.data;
+                        firstVal.data = temp.data;
+                        temp.data = val;
+                    }
+                    firstVal = firstVal.next;
+                }
+                temp = temp.next;
+            }
+            Console.WriteLine("Sorted list");
         }
 
         //method for displaying elements in linked list
