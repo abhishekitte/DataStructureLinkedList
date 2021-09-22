@@ -19,11 +19,7 @@ namespace DataStructureLinkedList.cs
             customLinkedList.InsertLast(56);
             customLinkedList.InsertLast(30);
             customLinkedList.InsertLast(70);
-            Console.WriteLine("Linked list before deletion:");
-            customLinkedList.Display();
-            customLinkedList.DeleteLastNode();
-            Console.WriteLine("Linked list after deletion:");
-            customLinkedList.Display();
+            Console.WriteLine(customLinkedList.Search(30));
             Console.ReadLine();
         }
     }

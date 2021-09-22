@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataStructureLinkedList.cs
+namespace DataStructurLinkedList.cs
 {
     class CustomLinkedList
     {
+     /// UC7 search a element in linked list
         Node head;
 
         //creating method for inserting elements at last
@@ -109,6 +110,22 @@ namespace DataStructureLinkedList.cs
             int lastDeletedNode = newNode.next.data;
             newNode.next = null;
             return lastDeletedNode;
+        }
+
+        //method to find a node in alinked list
+        public int Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("\nNode is present ");
+                    return value;
+                }
+                temp = temp.next;
+            }
+            return value;
         }
 
         //method for displaying elements in linked list
