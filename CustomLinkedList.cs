@@ -8,7 +8,7 @@ namespace DataStructureLinkedList.cs
 {
     class CustomLinkedList
     {
-     /// UC2 insert a element at front in linked list
+        /// UC5 delete a first element in linked list
         Node head;
 
         //creating method for inserting elements at last
@@ -75,6 +75,18 @@ namespace DataStructureLinkedList.cs
             }
             new_node.next = pos.next;
             pos.next = new_node;
+        }
+
+        //method to delete first node
+        public int DeleteFirstNode()
+        {
+            if (this.head == null)
+            {
+                return 0;
+            }
+            int deleteNode = this.head.data;
+            this.head = this.head.next;
+            return deleteNode;
         }
 
         //method for displaying elements in linked list
