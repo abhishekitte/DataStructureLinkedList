@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 namespace DataStructureLinkedList.cs
 {
     class CustomLinkedList
-    {/// <summary>
-     /// UC1 insert a element at last in linked list
-     /// </summary>
+    {
+     /// UC2 insert a element at front in linked list
         Node head;
 
         //creating method for inserting elements at last
@@ -37,6 +36,15 @@ namespace DataStructureLinkedList.cs
                 temp = temp.next;
             }
             return temp;
+        }
+
+        //method for inserting element at front
+        public void InsertFront(int new_data)
+        {
+            Node new_node = new Node(new_data);
+            new_node.next = this.head; 
+            this.head = new_node;
+            Console.WriteLine("Inserted into list" + new_node.data);
         }
 
         //method for displaying elements in linked list
